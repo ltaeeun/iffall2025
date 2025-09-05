@@ -1,0 +1,31 @@
+h1 {
+    color:darkred;
+    font-family: copperplate, fantasy;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: white
+}
+
+.name {
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.peter {
+    color:darkred
+}
+
+.act {
+    font-style: italic;
+    color:gray;
+    margin: 30px 0;
+}
+
+body {
+    padding: 0 160px;
+    background-color: black;
+}
