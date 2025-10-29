@@ -1,0 +1,443 @@
+body {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.button_container {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px 0;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    float: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.button_container .break {
+    clear: left;
+}
+
+
+a#btn_spotify {
+    display: inline-block;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px 40px 0 40px;
+    background-color: #2ebd59;
+    border: 2px solid #2ebd59;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+a#btn_spotify:hover {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+}
+
+a#btn_amazon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 75px;
+    padding-top: 8px;
+    background-color: #232f3e;
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+    transition: all .2s;
+}
+
+a#btn_amazon:hover {
+    background-color: #fc9a18;
+}
+
+a#btn_twitter {
+    display: inline-block;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 105px;
+    padding: 10px 30px 0 30px;
+    background-color: #56cdf1;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a#btn_twitter:hover {
+
+
+    background: rgb(46, 191, 236);
+    background: -moz-linear-gradient(-45deg, rgba(46, 191, 236, 1) 0%, rgba(40, 165, 203, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(46, 191, 236, 1) 0%, rgba(40, 165, 203, 1) 100%);
+    background: linear-gradient(135deg, rgba(46, 191, 236, 1) 0%, rgba(40, 165, 203, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ebfec', endColorstr='#28a5cb', GradientType=1);
+
+}
+
+a#btn_indiegogo {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #eb1478;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -2px;
+    transition: all .2s;
+}
+
+a#btn_indiegogo:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #eb1478;
+    transition: all .5s;
+}
+
+a#btn_indiegogo:hover {
+    color: #fff;
+}
+
+a#btn_indiegogo:hover:before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+a#btn_indiegogo span {
+    position: relative;
+    z-index: 10;
+}
+
+a#btn_cocacola {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 60px;
+
+}
+
+a#btn_cocacola:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+.button_container.image-hover::before {
+    content: "";
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border: 3px solid red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.button_container.image-hover:hover::before {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 1;
+}
+
+a#btn_lyft {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+
+#btn_lyft i {
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: 60px;
+    right: 20%;
+    color: #ff00a6;
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 2;
+    margin-top: 25px;
+}
+
+#btn_lyft:hover i {
+  right: -5%;
+  opacity: 1; 
+}
+
+#btn_lyft:hover img {
+  transform: translateX(-20%) scale(0.95);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+#btn_moo {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    font-size: 40px;
+    color: green;
+    text-decoration: none;
+}
+
+#btn_moo p {
+    opacity: 0;
+}
+
+#btn_moo i {
+    position: absolute;
+    font-size: 60px;
+    bottom: 80%;
+    right: 40%;
+    z-index: 2;
+}
+
+#btn_moo:hover p {
+  opacity: 1;
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+
+#btn_moo:hover {
+  color: black;
+  transition: all 0.3s ease;
+}
+
+@keyframes shakeDrive {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(-5deg); }
+  75%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#btn_moo:hover i {
+    transform: translateY(80%) scale(0.6);
+    transition: all 0.6s ease;
+}
+
+#btn_nike {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 75px;
+}
+
+#btn_nike .hover {
+    position: absolute;
+    top: 5%;
+    left: 22%;
+    opacity: 0;
+}
+
+#btn_nike:hover .hover {
+    animation: shakeDrive 0.8s ease-in-out infinite;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+a#btn_instagram {
+    display: inline-block;
+    position: relative;
+    font-size: 100px;
+    margin-top: 60px;
+    color: rgb(127, 122, 122);
+}
+
+#btn_instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2) rotate(20deg);
+    transition: all 0.3s ease;
+}
+
+#btn_facebook {
+    display: block;
+    position: relative;
+    margin-top: 50px;
+}
+
+#btn_facebook .hover {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+    opacity: 0;
+}
+
+@keyframes upDown {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+#btn_facebook:hover .main {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+#btn_facebook:hover .hover {
+    opacity: 1;
+    animation: upDown 0.6s ease-in-out infinite;
+    transition: all 0.3s;
+}
+
+#btn_mk {
+    padding: 10px 25px;
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-weight: 500;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: fit-content;
+}
+
+#btn_mk:hover {
+  color: white;
+}
+
+#btn_mk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;                 
+  background-color: black;
+  z-index: -1;                
+  transition: height 0.3s ease;
+}
+
+#btn_mk:hover::before {
+  height: 100%;
+}
+
+#btn_hp {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 110px;
+    text-decoration: none;
+    color: #4b2e83;
+    font-size: 24px;
+    font-family: 'Georgia', serif;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+#btn_hp:hover {
+    color: #a88bff;
+    text-shadow: 0 0 8px #a88bff, 0 0 12px #a88bff, 0 0 16px #a88bff;
+}
+
+#btn_dimecity {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 60px;
+    opacity: 1;
+}
+
+#btn_dimecity img {
+    transition: transform 1s ease-in-out;
+}
+
+#btn_dimecity:hover img {
+    transform: scale(1.2) rotate(360deg);
+}
+
+#btn_oldnavy {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 28px;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    padding: 20px 40px;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+#btn_oldnavy::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #003366;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+#btn_oldnavy:hover {
+    color: white;
+    transform: scale(1.1);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+#btn_oldnavy:hover::after {
+    width: 300%;
+    height: 300%;
+    filter: blur(10px);
+}
