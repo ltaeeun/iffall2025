@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grimm Brothers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Vidaloka&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wrap">
+
+
+        <div class="background background1"></div>
+
+        <div class="box1">
+            <p>From Folk to Fantasy:</p>
+            <h1>How Oral Tales <br>Became Fairy Tales</h1>
+        </div>
+
+        <p class="intro">The history of fairy tales, even from well before the birth of fantasy, is already a story of constant re-discovery. Typical of oral cultures, they probably figure among humanity's earliest stories. Yet from the moment they were put into writing through the hands of Grimm Brothers, they became a highly literary genre.</p>
+        
+        <div class="box2 box">
+            <div class="text">
+                <h2>Children's and <br>Household Tales</h2>
+                <p>The rise of romanticism, romantic nationalism, and trends in valuing popular culture in the early 19th century revived interest in fairy tales, which had declined since their late 17th-century peak. Johann Karl August Musäus published a popular collection of tales; the Grimms aided the revival with their folklore collection, built on the conviction that a national identity could be found in popular culture and with the common folk (Volk). They collected and published their tales as a reflection of German cultural identity.</p>
+            </div>
+            <div class="image"><img src="images/folk.jpg" alt="folk writing"></div>
+        </div>
+
+        <div class="background background2"></div>
+
+        <img src="images/vine1.png" width="60%" height="auto" class="vine1">
+
+        <div class="box3 box">
+            <div class="image">
+                <img src="images/Grimm.png" alt="The Grimm Brothers" width="500px" height="auto">
+            </div>
+            <div class="text">
+                <h2>The Grimm Brothers</h2>
+                <p>The Brothers Grimm (German: die Brüder Grimm or die Gebrüder Grimm), Jacob (1785-1863) and Wilhelm (1786-1859), were German academics who together collected and published folklore. The brothers are among the best-known storytellers of folktales, popularizing stories such as "Cinderella" ("Aschenputtel"), "The Frog Prince" ("Der Froschkönig"), "Hansel and Gretel" ("Hänsel und Gretel"), "Town Musicians of Bremen" ("Die Bremer Stadtmusikanten"), "Little Red Riding Hood" ("Rotkäppchen"), "Rapunzel", "Rumpelstiltskin" ("Rumpelstilzchen"), "Sleeping Beauty" ("Dornröschen"), and "Snow White" ("Schneewittchen"). Their first collection of folktales, Children's and Household Tales (Kinder- und Hausmärchen), was first published in 1812.</p>
+            </div>
+           
+        </div>
+
+        <div class="box4 box">
+            <h2>Methodology</h2>
+            <p>
+            The brothers gained a reputation for collecting tales from peasants, although many tales came from middle-class or aristocratic acquaintances. Wilhelm's wife, Henriette Dorothea (Dortchen) Wild, and her family, with their nursery maid, told the brothers some of the more well-known tales, such as "Hansel and Gretel" and "Sleeping Beauty" <br><br>
+
+            From 1807 onward, the brothers added to the collection. Jacob established the framework, maintained through many iterations; from 1815 until his death, Wilhelm assumed sole responsibility for editing and rewriting the tales. 
+            </p>
+        </div>
+
+        <div class="hanging">
+            <img src="images/hanging1.png" width="15%" height="auto" class="photo hanging-photo1">
+            <img src="images/hanging2.png" width="15%" height="auto" class="photo hanging-photo2">
+            <img src="images/hanging3.png" width="15%" height="auto" class="photo hanging-photo3">
+            <img src="images/lines.png" alt="lines" width="100%" height="auto">
+        </div>
+
+        <div class="background background3"></div>
+
+        <div class="box5 box">
+            <div class="text">
+                <h2>Reception and Legacy</h2>
+                <p>20th-century educators debated the value and influence of teaching stories that include brutality and violence, and some of the more gruesome details were sanitized. Dégh writes that some educators, in the belief that children should be shielded from cruelty of any form, believe that stories with a happy ending are fine to teach, whereas those that are darker, particularly the legends, might pose more harm. On the other hand, some educators and psychologists believe that children easily discern the difference between what is a story and what is not and that the tales continue to have value for children. <br><br>Regardless, the Grimms' stories continue to be popular around the world, although a recent study in England appears to suggest that parents consider the stories overly violent and inappropriate for young children.</p>
+            </div>
+            <div class="image">
+                <img src="images/quill.png" alt="quill and ink" width="500px" height="auto">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+    const headers = document.querySelectorAll('h2');
+
+    window.addEventListener('scroll', () => {
+        headers.forEach((h2, i) => {
+        const rect = h2.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8) {
+            h2.classList.add('reveal');
+        }
+        });
+    });
+    </script>
+
+
+</body>
+</html> 
