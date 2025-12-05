@@ -1,0 +1,121 @@
+html {
+    background-color: #FFF6EE;
+}
+
+h2 {
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: "Federant", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    margin-top: -1rem;
+}
+
+.wrap {
+    margin: 30px 120px;
+}
+
+.course-name {
+    color: #B10000;
+    font-family: Exo;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    margin-top: 12rem;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #B10000;
+    margin-bottom: -3.5rem;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.class {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 80px;
+}
+
+.box h3 {
+    color: #B10000;
+    font-family: "Federant";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: -1rem;
+}
+
+.box p {
+    font-family: "Exo";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.box .name {
+    font-family: "Federant";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0.5rem; 
+}
+
+.image-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(167, 3, 3, 0.4); /* overlay color */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrap:hover::after {
+    opacity: 1;
+}
+
+span {
+    color: #909090;
+}
+
+@media (max-width: 1200px) {
+    .class {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .wrap {
+        margin: 30px 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .class {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .wrap {
+        margin: 30px 20px;
+    }
+}
