@@ -1,0 +1,608 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 300vh;
+    background: linear-gradient(to bottom, #E5DDD8, #AEA898, #886061);
+}
+
+
+.poem_english p:hover {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+/*--------------------------korean------------------*/
+
+.korean_content {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    position: fixed;
+    right: 5%;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    /* display: flex;
+    flex-direction: row;
+    gap: 2rem;  */
+}
+
+.poem_korean {
+    position: fixed;
+    right: 5%;
+    padding: 20px;
+    display: flex;
+    z-index: 999;
+}
+
+.korean_content p {
+    /* display: inline-block; */
+    width: auto;
+    margin: 0 1.5rem;
+    /* border: 2px black solid; */
+    /* font-kerning: 110%; */
+}
+
+.poem_korean .line {
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+
+.poem_korean .korean_content:nth-of-type(5) p {
+    color: white;
+}
+
+.poem_korean .korean_content:nth-of-type(5) .line {
+    background-color: white;
+}
+
+/*-------------------english---------------------*/
+
+.poem_english {
+    font-family: "BIZ UDPMincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    padding: 20px;
+    font-size: 30px;
+    line-height: 42px;
+    color: #503737;
+
+
+}
+
+.poem_english p {
+    margin-bottom: 1.5rem;
+}
+
+.fix {
+    position: fixed;
+}
+
+
+.selection {
+    background: linear-gradient(#886061, #151b22);
+    color: #E5DDD8;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.selection2 {
+    background: #151b22;
+    color: #E5DDD8;
+}
+
+.wrapper_name {
+    font-family: "BIZ UDPMincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 60px;
+    padding: 40vh 0;
+    text-align: center;
+    
+}
+
+
+
+
+
+.poem_line {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* margin-bottom: 100px; */
+}
+
+
+/* ----------------------------- scrolling behavior */
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.poem_line {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.fix.active {
+    opacity: 0;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.shown {
+    opacity: 1;
+}
+
+.korean_content .hidden {
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.korean_content.shown {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+
+
+/*---------floating--------------------------------*/
+
+
+
+.floating-objects {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 300%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.rectangle-float {
+    background: linear-gradient(to bottom, #887B7B, #b8a7a754);
+}
+
+.rectangle-float:nth-of-type(odd) {
+    width: 30px;
+    height: 230px;
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+    filter:blur(10px);
+}
+
+.rectangle-float:nth-of-type(even) {
+    width: 87px;
+    height: 230px;
+    position: absolute;
+    animation: float-reverse 3s ease-in-out infinite;
+    filter:blur(5px)
+}
+
+.rectangle-float:nth-of-type(1) {
+    left: 60%;
+    top: 18%;
+}
+
+.rectangle-float:nth-of-type(2) {
+    right: 30%;
+    top: 50%;
+}
+
+.rectangle-float:nth-of-type(3) {
+    left: 25%;
+    top: 90%;
+}
+
+.rectangle-float:nth-of-type(4) {
+    right: 30%;
+    top: 5%;
+}
+
+.rectangle-float:nth-of-type(5) {
+    right: 10%;
+    top: 70%;
+}
+
+
+.rectangle-float:nth-of-type(6) {
+    right: 20%;
+    top: 180%;
+    background: linear-gradient(to bottom, #7b5e5e, #6f686854);
+}
+
+.rectangle-float:nth-of-type(7) {
+    left: 33%;
+    top: 200%;
+    background: linear-gradient(to bottom, #7b5e5e, #6f686854);
+}
+
+.rectangle-float:nth-of-type(8) {
+    left: 2%;
+    top: 15%;
+}
+
+.rectangle-float:nth-of-type(9) {
+    right: 30%;
+    top: 222%;
+    background: linear-gradient(to bottom, #7b5e5e, #6f686854);
+}
+
+.rectangle-float:nth-of-type(10) {
+    right: 25%;
+    top: 130%;
+}
+
+.rectangle-float:nth-of-type(11) {
+    right: 20%;
+    top: 240%;
+    background: linear-gradient(to bottom, #7b5e5e, #6f686854);
+}
+
+.rectangle-float:nth-of-type(12) {
+    right: 55%;
+    top: 210%;
+    background: linear-gradient(to bottom, #7b5e5e, #6f686854);
+}
+
+.rectangle-float:nth-of-type(13) {
+    left: 15%;
+    top: 110%;
+}
+
+.rectangle-float:nth-of-type(14) {
+    right: 50%;
+    top: 120%;
+}
+
+.rectangle-float:nth-of-type(15) {
+    right: 20%;
+    top: 100%;
+}
+
+.rectangle-float:nth-of-type(16) {
+    left: 5%;
+    top: 227%;
+    background: linear-gradient(to bottom, #7b5e5e, #6f686854);
+}
+
+.rectangle-float:nth-of-type(17) {
+    right: 5%;
+    top: 11%;
+}
+
+.rectangle-float:nth-of-type(18), .rectangle-float:nth-of-type(19), .rectangle-float:nth-of-type(20) {
+    display: none;
+}
+
+.floating-objects .korean-float {
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    animation: float-reverse 3s ease-in-out infinite;
+    color: #5f7545a7;
+    filter: blur(2px);
+    font-size: 30px;
+}
+
+.floating-objects .korean-float:nth-of-type(21) {
+    left: 20%;
+    top: 9%;
+}
+
+
+.floating-objects .korean-float:nth-of-type(22) {
+    right: 44%;
+    top: 23%;
+}
+
+
+.dot-float {
+    width: 20px;
+    height: 20px;
+    background-color: #A18C91;
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+    filter: blur(5px);
+    z-index: 99;
+}
+
+.dot-float:nth-of-type(21) {
+    right: 34%;
+    top: 212%;
+    background-color: #7b5e5e;
+}
+
+.dot-float:nth-of-type(22) {
+    right: 31%;
+    top: 240%;
+    background-color: #7b5e5e;
+}
+
+.dot-float:nth-of-type(23) {
+    left: 20%;
+    top: 30%;
+}
+
+.dot-float:nth-of-type(24) {
+    right: 25%;
+    top: 80%;
+}
+
+.dot-float:nth-of-type(25) {
+    right: 44%;
+    top: 111%;
+}
+
+.dot-float:nth-of-type(26) {
+    left: 14%;
+    top: 160%;
+}
+
+.dot-float:nth-of-type(27) {
+    left: 22%;
+    top: 200%;
+    background-color: #7b5e5e;
+}
+
+.dot-float:nth-of-type(28) {
+    left: 50%;
+    top: 176%;
+    background-color: #7b5e5e;
+}
+
+.floating-objects .korean-float:nth-of-type(31) {
+    left: 75%;
+    top: 60%;
+}
+
+.floating-objects .korean-float:nth-of-type(32) {
+    left: 48%;
+    top: 6%;
+}
+
+.floating-objects .korean-float:nth-of-type(33) {
+    left: 48%;
+    top: 105%;
+}
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes float-reverse {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-intense {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translate(-20px,30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.selection .rectangle-float2, .selection .dot-float2 {
+    background: #151b22;
+    position: absolute;
+    animation: float-intense ease-in-out infinite 2s;
+}
+
+.selection .rectangle-float2 {
+    right: 5%;
+    top: 74%;
+    width: 30px;
+    height: 230px;
+    filter: blur(10px);
+}
+
+.selection .rectangle-float2:nth-of-type(2) {
+    top: 80%;
+    left: 16%;
+}
+
+.selection .rectangle-float2:nth-of-type(3) {
+    top: 55%;
+    right: 13%;
+}
+
+.selection .dot-float2 {
+    width: 20px;
+    height: 20px;
+    filter: blur(10px);
+}
+
+.dot-float2:nth-of-type(4) {
+    left: 3%;
+    top: 10%;
+}
+
+.dot-float2:nth-of-type(5){
+    left: 40%;
+    bottom: 20%;
+}
+
+.dot-float2:nth-of-type(6){
+    left: 12%;
+    top: 70%
+}
+
+.dot-float2:nth-of-type(6){
+    left: 50%;
+    top: 13%
+}
+
+
+
+
+
+
+/*---------------------poem final*/
+
+
+#poem-final .korean{
+     font-family: "Noto Serif KR", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.word-flip {
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+}
+
+
+.word-flip:focus-visible {
+  outline-offset: 6px;
+  border-radius: 10px;
+}
+
+.viewport {
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+  height: 1.2em;       /* 라인 높이만큼 뷰포트 */
+  overflow: hidden;    /* 위/아래 슬라이드 숨김 */
+  vertical-align: bottom;
+}
+
+.word {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  white-space: nowrap;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+
+.word.next {
+  transform: translate(-50%, 100%);
+  opacity: 0;
+}
+
+
+#final-line {
+    margin: -10px 0 0 0;
+}
+
+
+.word-flip.is-animating .word.current {
+  animation: slideOutUp 420ms cubic-bezier(.2,.8,.2,1) forwards;
+}
+.word-flip.is-animating .word.next {
+  animation: slideInUp 420ms cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+button.word-flip {
+    font-family: "BIZ UDPMincho", serif;
+    font-weight: 400;
+    font-style: normal;
+     font-size: 30px;
+    text-align: center;
+}
+
+
+
+@keyframes slideOutUp {
+  from { transform: translate(-50%, 0%); opacity: 1; }
+  to   { transform: translate(-50%, -100%); opacity: 0; }
+}
+
+@keyframes slideInUp {
+  from { transform: translate(-50%, 100%); opacity: 0; }
+  to   { transform: translate(-50%, 0%); opacity: 1; }
+}
+
+.final {
+  margin-top: 40px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease, transform 1s ease;
+}
+
+
+
+.final.hidden {
+  opacity: 0;
+  transform: translateY(-60px);
+  pointer-events: none;
+}
+
+#poem-final .wrapper_name {
+    padding: 30vh 0;
+}
+
+
+
+#poem-final.poem_line{
+    background-color: #AEA898;
+}

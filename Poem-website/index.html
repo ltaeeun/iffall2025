@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Noto+Serif+KR:wght@200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="floating-objects">
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="rectangle-float"></div>
+            <div class="dot-float"></div>
+            <div class="dot-float"></div>
+            <div class="dot-float"></div>
+            <div class="dot-float"></div>
+            <div class="dot-float"></div>
+            <div class="dot-float"></div>
+            <div class="dot-float"></div>
+            <div class="dot-float"></div>
+            <!-- <div class="korean-float"> <p>몸짓에</p></div>
+            <div class="korean-float"> <p>않았다</p></div>
+            <div class="korean-float"> <p>이름을</p></div> -->
+        </div>
+
+        <div class="poem_korean">
+
+            <div class="korean_content">
+                <p>하나의 몸짓에 지나지 않았다</p>
+                <p>그는 다만</p>
+                <p>내가 그의 이름을 불러 주기 전에는</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="korean_content hidden">
+                <p>꽃이 되었다 </p>
+                <p>그는 나에게로 와서</p>
+                <p>내가 그의 이름을 불러주었을 때</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="korean_content hidden">
+                <p>누가 나의 이름을 불러다오</p>
+                <p>나의 이 빛깔과 향기에 알맞은</p>
+                <p>내가 그의 이름을 불러준 것처럼</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="korean_content hidden">
+                <p class="hidden">ye</p>
+                <p>그의 꽃이 되고 싶다</p>
+                <p>그에게로 가서 나도</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="korean_content hidden">
+                <p class="hidden">ye</p>
+                <p>무엇이 되고 싶다</p>
+                <p>우리들은 모두</p>
+                <div class="line"></div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="poem_line">
+
+        </div>
+        <div class="poem_english fix fix1">
+            <p><span class="hidden">Before</span> I called his name,</p>
+            <p><span class="hidden">She was nothing <br>more than a gesture</span></p>
+        </div>
+        <div class="poem_english fix fix2">
+            <p><span class="hidden">Before</span> I called his name,</p>
+            <p>She <span class="hidden">was nothing <br>more than a gesture</span></p>
+        </div>
+
+        <div class="poem_english">
+            <p>Before <span class="hidden">I called his name,</span></p>
+            <p><span class="hidden">She </span>was nothing <br>more than a gesture</p>
+
+        </div>
+
+        <div class="poem_line frame2">
+            <div class="poem_english">
+                <p>When </p>
+                <p><span class="hidden">She </span>came to me <br>and became a flower</p>
+            </div>
+
+        </div>
+
+        <div class="poem_line">
+            <div class="poem_english">
+                <p>Like </p>
+                <p>will someone that suits my light and fragrance <br>please call my name?</p>
+            </div>
+
+        </div>
+
+        <div class="poem_line selection">
+            <div class="rectangle-float2"></div>
+            <div class="rectangle-float2"></div>
+            <div class="rectangle-float2"></div>
+            <div class="dot-float2"></div>
+            <div class="dot-float2"></div>
+            <div class="dot-float2"></div>
+            <div class="dot-float2"></div>
+            <div class="wrapper_name">
+                <p>I, too, long to come to her</p>
+                <p>and become her flower.</p>
+            </div>
+        </div>
+
+        <div class="poem_line selection2">
+            <div class="wrapper_name">
+                <p>We all long</p>
+                <p>to be something.</p>
+            </div>
+        </div>
+
+        <div class="poem_line" id="poem-final">
+            <div class="wrapper_name">
+                <p class="korean">너는 나에게 나는 너에게</p>
+                <button class="word-flip" id="wordFlip" type="button" aria-label="Change word">
+                    <p class="viewport">
+                        <span class="word current">You,</span>
+                        <span class="word next" aria-hidden="true"></span>
+                    </p>
+                </button>
+
+
+                <p id="final-line" class="final hidden">long to be an unforgettable gaze. <br><span class="korean">잊혀지지
+                        않는 하나의 눈짓이 되고싶다.</span></p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+
+
+        const floatingLayer = document.querySelector(".floating-objects");
+
+        let ticking = false;
+
+        window.addEventListener("scroll", () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const y = window.scrollY;
+
+                    const factor = 3;
+                    floatingLayer.style.transform = `translateY(${-y * factor}px)`;
+
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        var korean_content = document.querySelectorAll('.korean_content');
+
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY < 100) {
+                showFirst();
+                addFix2();
+            }
+
+            if (window.scrollY >= window.innerHeight) {
+                showSecond();
+                addFix2();
+            }
+
+            if (window.scrollY >= window.innerHeight + 10) {
+                removeFix2();
+            }
+
+            if (window.scrollY >= window.innerHeight * 2) {
+                showThird();
+                addFix1();
+            }
+
+            if (window.scrollY >= window.innerHeight * 2 + 300) {
+                removeFix1();
+            }
+
+            if (window.scrollY >= window.innerHeight * 3) {
+                showFourth();
+            }
+
+            if (window.scrollY >= window.innerHeight * 4) {
+                showFifth();
+            }
+
+            if (window.scrollY >= window.innerHeight * 5) {
+                removeFifth();
+            }
+        });
+
+        function showFirst() {
+            korean_content[0].classList.remove('hidden');
+            korean_content[0].classList.add('shown');
+
+
+            korean_content[1].classList.add('hidden');
+            korean_content[1].classList.remove('shown');
+        }
+
+        function showSecond() {
+            korean_content[1].classList.remove('hidden');
+            korean_content[1].classList.add('shown');
+
+            korean_content[0].classList.add('hidden');
+            korean_content[0].classList.remove('shown');
+            korean_content[2].classList.add('hidden');
+            korean_content[2].classList.remove('shown');
+        }
+
+        function showThird() {
+            korean_content[2].classList.remove('hidden');
+            korean_content[2].classList.add('shown');
+
+            korean_content[1].classList.add('hidden');
+            korean_content[1].classList.remove('shown');
+            korean_content[3].classList.add('hidden');
+            korean_content[3].classList.remove('shown');
+        }
+
+        function showFourth() {
+            korean_content[3].classList.remove('hidden');
+            korean_content[3].classList.add('shown');
+
+            korean_content[2].classList.add('hidden');
+            korean_content[2].classList.remove('shown');
+            korean_content[4].classList.add('hidden');
+            korean_content[4].classList.remove('shown');
+        }
+
+        function showFifth() {
+            korean_content[4].classList.remove('hidden');
+            korean_content[4].classList.add('shown');
+
+            korean_content[3].classList.add('hidden');
+            korean_content[3].classList.remove('shown');
+        }
+
+        function removeFifth() {
+            korean_content[4].classList.remove('shown');
+            korean_content[4].classList.add('hidden');
+        }
+
+        function removeFix2() {
+            var fix2 = document.querySelector('.fix2');
+            fix2.classList.remove('fix');
+        }
+
+        function addFix2() {
+            var fix2 = document.querySelector('.fix2');
+            fix2.classList.add('fix');
+        }
+
+        function removeFix1() {
+            var fix1 = document.querySelector('.fix1');
+            fix1.classList.remove('fix');
+        }
+
+        function addFix1() {
+            var fix1 = document.querySelector('.fix1');
+            fix1.classList.add('fix');
+        }
+
+
+
+
+
+        const words = ["You", "to me", "and I", "to you"];
+        let i = 0;
+
+        const btn = document.getElementById("wordFlip");
+        const currentEl = btn.querySelector(".word.current");
+        const nextEl = btn.querySelector(".word.next");
+        const finalBox = document.getElementById("final-line");
+        const finalPoem = document.getElementById("poem-final")
+
+
+        currentEl.textContent = words[i];
+
+        let locked = false;
+
+        btn.addEventListener("click", () => {
+            if (locked) return;
+            locked = true;
+
+            const nextIndex = (i + 1) % words.length;
+            nextEl.textContent = words[nextIndex];
+
+
+            btn.classList.add("is-animating");
+
+
+            const onDone = () => {
+                btn.classList.remove("is-animating");
+                currentEl.textContent = words[nextIndex];
+                nextEl.textContent = "";
+                i = nextIndex;
+
+                btn.removeEventListener("animationend", onDone);
+                locked = false;
+
+
+                if (words[i] === "to you") {
+                    finalBox.classList.remove("hidden");
+                    finalPoem.classList.add("active");
+                }
+            };
+
+
+
+
+            btn.addEventListener("animationend", onDone, { once: true });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
